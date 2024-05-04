@@ -1,0 +1,1402 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{color,pxfonts,fix-cm}
+\usepackage{latexsym}
+\usepackage[mathletters]{ucs}
+\DeclareUnicodeCharacter{8211}{\textendash}
+\DeclareUnicodeCharacter{8970}{$\lfloor$}
+\DeclareUnicodeCharacter{8971}{$\rfloor$}
+\DeclareUnicodeCharacter{46}{\textperiodcentered}
+\DeclareUnicodeCharacter{8594}{$\rightarrow$}
+\DeclareUnicodeCharacter{8216}{\textquoteleft}
+\DeclareUnicodeCharacter{8730}{$\surd$}
+\DeclareUnicodeCharacter{8704}{$\forall$}
+\DeclareUnicodeCharacter{8707}{$\exists$}
+\DeclareUnicodeCharacter{937}{$\Omega$}
+\DeclareUnicodeCharacter{8804}{$\leq$}
+\DeclareUnicodeCharacter{8727}{$\ast$}
+\DeclareUnicodeCharacter{32}{$\ $}
+\DeclareUnicodeCharacter{8805}{$\geq$}
+\DeclareUnicodeCharacter{8660}{$\Leftrightarrow$}
+\DeclareUnicodeCharacter{8220}{\textquotedblleft}
+\DeclareUnicodeCharacter{58}{$\colon$}
+\DeclareUnicodeCharacter{8221}{\textquotedblright}
+\DeclareUnicodeCharacter{8226}{$\bullet$}
+\DeclareUnicodeCharacter{981}{$\phi$}
+\DeclareUnicodeCharacter{124}{\textbar}
+\DeclareUnicodeCharacter{920}{$\Theta$}
+\DeclareUnicodeCharacter{8217}{\textquoteright}
+\DeclareUnicodeCharacter{60}{\textless}
+\DeclareUnicodeCharacter{8734}{$\infty$}
+\DeclareUnicodeCharacter{945}{$\alpha$}
+\DeclareUnicodeCharacter{8658}{$\Rightarrow$}
+\DeclareUnicodeCharacter{62}{\textgreater}
+\DeclareUnicodeCharacter{8838}{$\subseteq$}
+\usepackage[T1]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage{pict2e}
+\usepackage{wasysym}
+\usepackage[english]{babel}
+\usepackage{tikz}
+\pagestyle{empty}
+\usepackage[margin=0in,paperwidth=841pt,paperheight=595pt]{geometry}
+\begin{document}
+\definecolor{color_29791}{rgb}{0,0,0}
+\begin{tikzpicture}[overlay]\path(0pt,0pt);\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(73.824,-19.32001){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}CS2040C Cheat Sheet }
+\put(84.504,-27.35999){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Github/ehz0ah }
+\put(71.04,-35.40002){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}NUS CEG Lee Hao Zhe }
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_29791][even odd rule]
+(7.68pt, -12.84003pt) -- (8.16pt, -12.84003pt)
+ -- (8.16pt, -12.84003pt)
+ -- (8.16pt, -12.36005pt)
+ -- (8.16pt, -12.36005pt)
+ -- (7.68pt, -12.36005pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(7.68pt, -12.84003pt) -- (8.16pt, -12.84003pt)
+ -- (8.16pt, -12.84003pt)
+ -- (8.16pt, -12.36005pt)
+ -- (8.16pt, -12.36005pt)
+ -- (7.68pt, -12.36005pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(8.16pt, -12.84003pt) -- (202.1pt, -12.84003pt)
+ -- (202.1pt, -12.84003pt)
+ -- (202.1pt, -12.36005pt)
+ -- (202.1pt, -12.36005pt)
+ -- (8.16pt, -12.36005pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(202.1pt, -12.84003pt) -- (202.58pt, -12.84003pt)
+ -- (202.58pt, -12.84003pt)
+ -- (202.58pt, -12.36005pt)
+ -- (202.58pt, -12.36005pt)
+ -- (202.1pt, -12.36005pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(202.1pt, -12.84003pt) -- (202.58pt, -12.84003pt)
+ -- (202.58pt, -12.84003pt)
+ -- (202.58pt, -12.36005pt)
+ -- (202.58pt, -12.36005pt)
+ -- (202.1pt, -12.36005pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(7.68pt, -37.08002pt) -- (8.16pt, -37.08002pt)
+ -- (8.16pt, -37.08002pt)
+ -- (8.16pt, -12.84003pt)
+ -- (8.16pt, -12.84003pt)
+ -- (7.68pt, -12.84003pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(7.68pt, -37.56pt) -- (8.16pt, -37.56pt)
+ -- (8.16pt, -37.56pt)
+ -- (8.16pt, -37.08002pt)
+ -- (8.16pt, -37.08002pt)
+ -- (7.68pt, -37.08002pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(7.68pt, -37.56pt) -- (8.16pt, -37.56pt)
+ -- (8.16pt, -37.56pt)
+ -- (8.16pt, -37.08002pt)
+ -- (8.16pt, -37.08002pt)
+ -- (7.68pt, -37.08002pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(8.16pt, -37.56pt) -- (202.1pt, -37.56pt)
+ -- (202.1pt, -37.56pt)
+ -- (202.1pt, -37.08002pt)
+ -- (202.1pt, -37.08002pt)
+ -- (8.16pt, -37.08002pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(202.1pt, -37.08002pt) -- (202.58pt, -37.08002pt)
+ -- (202.58pt, -37.08002pt)
+ -- (202.58pt, -12.84003pt)
+ -- (202.58pt, -12.84003pt)
+ -- (202.1pt, -12.84003pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(202.1pt, -37.56pt) -- (202.58pt, -37.56pt)
+ -- (202.58pt, -37.56pt)
+ -- (202.58pt, -37.08002pt)
+ -- (202.58pt, -37.08002pt)
+ -- (202.1pt, -37.08002pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(202.1pt, -37.56pt) -- (202.58pt, -37.56pt)
+ -- (202.58pt, -37.56pt)
+ -- (202.58pt, -37.08002pt)
+ -- (202.58pt, -37.08002pt)
+ -- (202.1pt, -37.08002pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(7.68,-44.03998){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Class: Blueprint that defines properties and behaviours and to create }
+\put(7.68,-53.29999){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}objects, while instance is the instantiation of a class. }
+\put(7.68,-62.65997){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Public: Attributes/functions can be accessed outside of the class. }
+\put(7.68,-72.02002){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Private: No visibility from the outside. Can only be }
+\put(7.68,-81.38){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}accessed/modified by getters/setters. Other classes can access if they }
+\put(7.68,-90.62){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}are friend class. By default, members are all private. }
+\put(7.68,-99.98001){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Encapsulation: No direct access to data, only through exposed }
+\put(7.68,-109.34){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}functions, data + functions abstractions. E.g. Classes. }
+\put(7.68,-118.58){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Inheritance: A subclass/derived class inherits attributes/methods }
+\put(7.68,-127.94){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}from parent class. Subclass override parent class but cannot access the }
+\put(7.68,-137.3){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}private attributes/methods of its parent class unless its protected. }
+\put(7.68,-146.54){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Polymorphism: Allows objects of different classes to be treated as }
+\put(7.68,-155.9){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}objects of a common parent class. E.g. Stack pointer (x) that points to }
+\put(7.68,-165.26){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}a subclass. Without virtual, any methods called by x will call parent }
+\put(7.68,-174.62){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}class method instead of subclasses. }
+\put(7.68,-183.89){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Constructor is called when an instance of the class is created. }
+\put(7.68,-193.25){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Destructor will be called when an instance of the class is deleted. }
+\put(7.68,-202.61){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Variable-size array (LL): Size changes even during running time, }
+\put(7.68,-211.85){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}data is not stored in ONE connected trunk of memory. }
+\put(7.68,-221.21){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}ADT: Create a class with a set of its own functions using an underlying }
+\put(7.68,-230.57){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}data structure. Only care the interface but not the implementation. }
+\put(7.68,-239.81){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Kadane: Use 2 variables A (MIN) and B (0). Iterate through the array }
+\put(7.68,-249.17){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}and update B to the sum of the current element and B. Update A to be }
+\put(7.68,-258.53){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}the maximum of A and B. A will contain the maximum sum of a }
+\put(7.68,-267.77){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}contiguous subarray. O(n). }
+\put(7.68,-277.13){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Peak-Finding: Recurse to the larger side for 1D array. For 2D arrays, }
+\put(7.68,-286.49){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}find the middle column and the column maximum for it and it’s left \& }
+\put(7.68,-295.85){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}right neighbours. Recurse to the larger side.  O(nlogm). }
+\put(7.68,-305.11){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Time Complexity:  }
+\put(7.68,-314.59){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Worse-case (O): ∃c, n}
+\put(71.64,-315.07){\fontsize{4.56}{1}\usefont{T1}{cmr}{m}{it}\selectfont\color{color_29791}0}
+\put(73.944,-314.59){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{it}\selectfont\color{color_29791} > 0: for all n > n}
+\put(124.1,-315.07){\fontsize{4.56}{1}\usefont{T1}{cmr}{m}{it}\selectfont\color{color_29791}0 }
+\put(127.46,-314.59){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{it}\selectfont\color{color_29791}, 푇(푛) ≤ 푐 푓(푛) }
+\put(7.68,-324.07){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Average (Θ): T(n) = Θ(f(n)) ⇔ T(n) = O(f(n)) and T(n) = Ω(f(n)) }
+\put(7.68,-333.55){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Best-case (Ω): ∃c, n}
+\put(65.16,-334.03){\fontsize{4.56}{1}\usefont{T1}{cmr}{m}{it}\selectfont\color{color_29791}0}
+\put(67.44,-333.55){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{it}\selectfont\color{color_29791} > 0: for all n > n}
+\put(117.62,-334.03){\fontsize{4.56}{1}\usefont{T1}{cmr}{m}{it}\selectfont\color{color_29791}0 }
+\put(120.98,-333.55){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{it}\selectfont\color{color_29791}, T(n) ≥ c f(n) }
+\put(7.68,-343.03){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Sorting }
+\put(7.68,-352.27){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}For small arrays (n < 1000), use Insertion Sort. For large, use Quick }
+\put(7.68,-361.63){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}sort then insertion sort (Hybrid Quick Sort). This reduces recursion }
+\put(7.68,-370.99){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}overhead. }
+\put(13.32,-380.83){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Bubble Sort }
+\put(13.32,-388.87){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Largest element winds up }
+\put(13.32,-396.91){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}at the back }
+\put(98.18,-380.83){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Worst n}
+\put(119.78,-378.31){\fontsize{4.56}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}2}
+\put(122.06,-380.83){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}, best n, Average n}
+\put(173.18,-378.31){\fontsize{4.56}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}2}
+\put(175.34,-380.83){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}. Swaps }
+\put(98.18,-388.87){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}elements with each other. O(1) }
+\put(98.18,-396.91){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}memory, stable. Invariant: Largest }
+\put(98.18,-404.95){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}element is the last element. Number }
+\put(98.18,-412.99){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}of comparisons = (n – 1) + (n – 2) }
+\put(98.18,-421.03){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}+ … + 1 }
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_29791][even odd rule]
+(7.68pt, -374.23pt) -- (8.16pt, -374.23pt)
+ -- (8.16pt, -374.23pt)
+ -- (8.16pt, -373.75pt)
+ -- (8.16pt, -373.75pt)
+ -- (7.68pt, -373.75pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(7.68pt, -374.23pt) -- (8.16pt, -374.23pt)
+ -- (8.16pt, -374.23pt)
+ -- (8.16pt, -373.75pt)
+ -- (8.16pt, -373.75pt)
+ -- (7.68pt, -373.75pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(8.16pt, -374.23pt) -- (92.54401pt, -374.23pt)
+ -- (92.54401pt, -374.23pt)
+ -- (92.54401pt, -373.75pt)
+ -- (92.54401pt, -373.75pt)
+ -- (8.16pt, -373.75pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(92.54pt, -374.23pt) -- (93.02pt, -374.23pt)
+ -- (93.02pt, -374.23pt)
+ -- (93.02pt, -373.75pt)
+ -- (93.02pt, -373.75pt)
+ -- (92.54pt, -373.75pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(93.02pt, -374.23pt) -- (202.1pt, -374.23pt)
+ -- (202.1pt, -374.23pt)
+ -- (202.1pt, -373.75pt)
+ -- (202.1pt, -373.75pt)
+ -- (93.02pt, -373.75pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(202.1pt, -374.23pt) -- (202.58pt, -374.23pt)
+ -- (202.58pt, -374.23pt)
+ -- (202.58pt, -373.75pt)
+ -- (202.58pt, -373.75pt)
+ -- (202.1pt, -373.75pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(202.1pt, -374.23pt) -- (202.58pt, -374.23pt)
+ -- (202.58pt, -374.23pt)
+ -- (202.58pt, -373.75pt)
+ -- (202.58pt, -373.75pt)
+ -- (202.1pt, -373.75pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(7.68pt, -422.59pt) -- (8.16pt, -422.59pt)
+ -- (8.16pt, -422.59pt)
+ -- (8.16pt, -374.23pt)
+ -- (8.16pt, -374.23pt)
+ -- (7.68pt, -374.23pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(92.54pt, -422.59pt) -- (93.02pt, -422.59pt)
+ -- (93.02pt, -422.59pt)
+ -- (93.02pt, -374.23pt)
+ -- (93.02pt, -374.23pt)
+ -- (92.54pt, -374.23pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(202.1pt, -422.59pt) -- (202.58pt, -422.59pt)
+ -- (202.58pt, -422.59pt)
+ -- (202.58pt, -374.23pt)
+ -- (202.58pt, -374.23pt)
+ -- (202.1pt, -374.23pt) -- cycle
+;
+\begin{scope}
+\clip
+(8.16pt, -471.46pt) -- (92.54401pt, -471.46pt)
+ -- (92.54401pt, -471.46pt)
+ -- (92.54401pt, -423.076pt)
+ -- (92.54401pt, -423.076pt)
+ -- (8.16pt, -423.076pt) -- cycle
+;
+\begin{scope}
+\clip
+(8.16pt, -471.46pt) -- (92.54401pt, -471.46pt)
+ -- (92.54401pt, -471.46pt)
+ -- (92.54401pt, -423.076pt)
+ -- (92.54401pt, -423.076pt)
+ -- (8.16pt, -423.076pt) -- cycle
+;
+\end{scope}
+\end{scope}
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(13.32,-429.58){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Selection Sort }
+\put(13.32,-437.62){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Selects the smallest }
+\put(13.32,-445.66){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}element and swap it with }
+\put(13.32,-453.7){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}first element then }
+\put(13.32,-461.86){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}increment }
+\put(98.18,-429.58){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Worst/Best/Average n}
+\put(168.62,-427.03){\fontsize{4.56}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}2}
+\put(170.9,-429.58){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}. O(1) }
+\put(98.18,-437.62){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}memory, NOT stable. Invariant: }
+\put(98.18,-445.66){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Half the array would be perfectly }
+\put(98.18,-453.7){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}sorted; other half would be }
+\put(98.18,-461.86){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}jumbled. Number of comparisons = }
+\put(98.18,-469.9){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}(n – 1) + (n – 2) + … + 1 }
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_29791][even odd rule]
+(7.68pt, -423.07pt) -- (8.16pt, -423.07pt)
+ -- (8.16pt, -423.07pt)
+ -- (8.16pt, -422.59pt)
+ -- (8.16pt, -422.59pt)
+ -- (7.68pt, -422.59pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(8.16pt, -423.07pt) -- (92.54401pt, -423.07pt)
+ -- (92.54401pt, -423.07pt)
+ -- (92.54401pt, -422.59pt)
+ -- (92.54401pt, -422.59pt)
+ -- (8.16pt, -422.59pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(92.54pt, -423.07pt) -- (93.02pt, -423.07pt)
+ -- (93.02pt, -423.07pt)
+ -- (93.02pt, -422.59pt)
+ -- (93.02pt, -422.59pt)
+ -- (92.54pt, -422.59pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(93.02pt, -423.07pt) -- (202.1pt, -423.07pt)
+ -- (202.1pt, -423.07pt)
+ -- (202.1pt, -422.59pt)
+ -- (202.1pt, -422.59pt)
+ -- (93.02pt, -422.59pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(202.1pt, -423.07pt) -- (202.58pt, -423.07pt)
+ -- (202.58pt, -423.07pt)
+ -- (202.58pt, -422.59pt)
+ -- (202.58pt, -422.59pt)
+ -- (202.1pt, -422.59pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(7.68pt, -471.46pt) -- (8.16pt, -471.46pt)
+ -- (8.16pt, -471.46pt)
+ -- (8.16pt, -423.076pt)
+ -- (8.16pt, -423.076pt)
+ -- (7.68pt, -423.076pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(92.54pt, -471.46pt) -- (93.02pt, -471.46pt)
+ -- (93.02pt, -471.46pt)
+ -- (93.02pt, -423.076pt)
+ -- (93.02pt, -423.076pt)
+ -- (92.54pt, -423.076pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(202.1pt, -471.46pt) -- (202.58pt, -471.46pt)
+ -- (202.58pt, -471.46pt)
+ -- (202.58pt, -423.076pt)
+ -- (202.58pt, -423.076pt)
+ -- (202.1pt, -423.076pt) -- cycle
+;
+\begin{scope}
+\clip
+(8.16pt, -504.096pt) -- (92.54401pt, -504.096pt)
+ -- (92.54401pt, -504.096pt)
+ -- (92.54401pt, -471.936pt)
+ -- (92.54401pt, -471.936pt)
+ -- (8.16pt, -471.936pt) -- cycle
+;
+\begin{scope}
+\clip
+(8.16pt, -504.096pt) -- (92.54401pt, -504.096pt)
+ -- (92.54401pt, -504.096pt)
+ -- (92.54401pt, -471.936pt)
+ -- (92.54401pt, -471.936pt)
+ -- (8.16pt, -471.936pt) -- cycle
+;
+\end{scope}
+\end{scope}
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(13.32,-478.42){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Insertion Sort }
+\put(13.32,-486.456){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Place the current element }
+\put(13.32,-494.496){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}at the correct place in each }
+\put(13.32,-502.536){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}iteration. }
+\put(98.18,-478.42){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Worst n}
+\put(120.62,-475.9){\fontsize{4.56}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}2}
+\put(122.9,-478.42){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}, best n, Average n}
+\put(177.38,-475.9){\fontsize{4.56}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}2}
+\put(179.54,-478.42){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}. O(1) }
+\put(98.18,-486.456){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}memory, stable. Invariant: Half of }
+\put(98.18,-494.496){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}array sorted; the other half totally }
+\put(98.18,-502.536){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}unchanged. }
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_29791][even odd rule]
+(7.68pt, -471.94pt) -- (8.16pt, -471.94pt)
+ -- (8.16pt, -471.94pt)
+ -- (8.16pt, -471.46pt)
+ -- (8.16pt, -471.46pt)
+ -- (7.68pt, -471.46pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(8.16pt, -471.94pt) -- (92.54401pt, -471.94pt)
+ -- (92.54401pt, -471.94pt)
+ -- (92.54401pt, -471.46pt)
+ -- (92.54401pt, -471.46pt)
+ -- (8.16pt, -471.46pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(92.54pt, -471.94pt) -- (93.02pt, -471.94pt)
+ -- (93.02pt, -471.94pt)
+ -- (93.02pt, -471.46pt)
+ -- (93.02pt, -471.46pt)
+ -- (92.54pt, -471.46pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(93.02pt, -471.94pt) -- (202.1pt, -471.94pt)
+ -- (202.1pt, -471.94pt)
+ -- (202.1pt, -471.46pt)
+ -- (202.1pt, -471.46pt)
+ -- (93.02pt, -471.46pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(202.1pt, -471.94pt) -- (202.58pt, -471.94pt)
+ -- (202.58pt, -471.94pt)
+ -- (202.58pt, -471.46pt)
+ -- (202.58pt, -471.46pt)
+ -- (202.1pt, -471.46pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(7.68pt, -504.096pt) -- (8.16pt, -504.096pt)
+ -- (8.16pt, -504.096pt)
+ -- (8.16pt, -471.936pt)
+ -- (8.16pt, -471.936pt)
+ -- (7.68pt, -471.936pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(92.54pt, -504.096pt) -- (93.02pt, -504.096pt)
+ -- (93.02pt, -504.096pt)
+ -- (93.02pt, -471.936pt)
+ -- (93.02pt, -471.936pt)
+ -- (92.54pt, -471.936pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(202.1pt, -504.096pt) -- (202.58pt, -504.096pt)
+ -- (202.58pt, -504.096pt)
+ -- (202.58pt, -471.936pt)
+ -- (202.58pt, -471.936pt)
+ -- (202.1pt, -471.936pt) -- cycle
+;
+\begin{scope}
+\clip
+(8.16pt, -552.936pt) -- (92.54401pt, -552.936pt)
+ -- (92.54401pt, -552.936pt)
+ -- (92.54401pt, -504.576pt)
+ -- (92.54401pt, -504.576pt)
+ -- (8.16pt, -504.576pt) -- cycle
+;
+\begin{scope}
+\clip
+(8.16pt, -552.936pt) -- (92.54401pt, -552.936pt)
+ -- (92.54401pt, -552.936pt)
+ -- (92.54401pt, -504.576pt)
+ -- (92.54401pt, -504.576pt)
+ -- (8.16pt, -504.576pt) -- cycle
+;
+\end{scope}
+\end{scope}
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(13.32,-511.056){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Merge Sort (D \& C) }
+\put(13.32,-519.096){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Split array until there are 2 }
+\put(13.32,-527.136){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}elements, then sort the }
+\put(13.32,-535.296){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}split elements and merge }
+\put(13.32,-543.336){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}back in order. }
+\put(13.32,-551.376){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Merging takes O(n) }
+\put(98.18,-511.056){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Worst/Best/Average nlog n. O(n) }
+\put(98.18,-519.096){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}memory, stable. Invariant: Array }
+\put(98.18,-527.136){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}has parts that are sorted but not }
+\put(98.18,-535.296){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}merged yet. For example, two }
+\put(98.18,-543.336){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}halves of array sorted but not }
+\put(98.18,-551.376){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}merged yet. }
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_29791][even odd rule]
+(7.68pt, -504.576pt) -- (8.16pt, -504.576pt)
+ -- (8.16pt, -504.576pt)
+ -- (8.16pt, -504.096pt)
+ -- (8.16pt, -504.096pt)
+ -- (7.68pt, -504.096pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(8.16pt, -504.576pt) -- (92.54401pt, -504.576pt)
+ -- (92.54401pt, -504.576pt)
+ -- (92.54401pt, -504.096pt)
+ -- (92.54401pt, -504.096pt)
+ -- (8.16pt, -504.096pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(92.54pt, -504.576pt) -- (93.02pt, -504.576pt)
+ -- (93.02pt, -504.576pt)
+ -- (93.02pt, -504.096pt)
+ -- (93.02pt, -504.096pt)
+ -- (92.54pt, -504.096pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(93.02pt, -504.576pt) -- (202.1pt, -504.576pt)
+ -- (202.1pt, -504.576pt)
+ -- (202.1pt, -504.096pt)
+ -- (202.1pt, -504.096pt)
+ -- (93.02pt, -504.096pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(202.1pt, -504.576pt) -- (202.58pt, -504.576pt)
+ -- (202.58pt, -504.576pt)
+ -- (202.58pt, -504.096pt)
+ -- (202.58pt, -504.096pt)
+ -- (202.1pt, -504.096pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(7.68pt, -552.936pt) -- (8.16pt, -552.936pt)
+ -- (8.16pt, -552.936pt)
+ -- (8.16pt, -504.576pt)
+ -- (8.16pt, -504.576pt)
+ -- (7.68pt, -504.576pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(7.68pt, -553.416pt) -- (8.16pt, -553.416pt)
+ -- (8.16pt, -553.416pt)
+ -- (8.16pt, -552.936pt)
+ -- (8.16pt, -552.936pt)
+ -- (7.68pt, -552.936pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(7.68pt, -553.416pt) -- (8.16pt, -553.416pt)
+ -- (8.16pt, -553.416pt)
+ -- (8.16pt, -552.936pt)
+ -- (8.16pt, -552.936pt)
+ -- (7.68pt, -552.936pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(8.16pt, -553.416pt) -- (92.54401pt, -553.416pt)
+ -- (92.54401pt, -553.416pt)
+ -- (92.54401pt, -552.936pt)
+ -- (92.54401pt, -552.936pt)
+ -- (8.16pt, -552.936pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(92.54pt, -552.936pt) -- (93.02pt, -552.936pt)
+ -- (93.02pt, -552.936pt)
+ -- (93.02pt, -504.576pt)
+ -- (93.02pt, -504.576pt)
+ -- (92.54pt, -504.576pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(92.54pt, -553.416pt) -- (93.02pt, -553.416pt)
+ -- (93.02pt, -553.416pt)
+ -- (93.02pt, -552.936pt)
+ -- (93.02pt, -552.936pt)
+ -- (92.54pt, -552.936pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(93.02pt, -553.416pt) -- (202.1pt, -553.416pt)
+ -- (202.1pt, -553.416pt)
+ -- (202.1pt, -552.936pt)
+ -- (202.1pt, -552.936pt)
+ -- (93.02pt, -552.936pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(202.1pt, -552.936pt) -- (202.58pt, -552.936pt)
+ -- (202.58pt, -552.936pt)
+ -- (202.58pt, -504.576pt)
+ -- (202.58pt, -504.576pt)
+ -- (202.1pt, -504.576pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(202.1pt, -553.416pt) -- (202.58pt, -553.416pt)
+ -- (202.58pt, -553.416pt)
+ -- (202.58pt, -552.936pt)
+ -- (202.58pt, -552.936pt)
+ -- (202.1pt, -552.936pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(202.1pt, -553.416pt) -- (202.58pt, -553.416pt)
+ -- (202.58pt, -553.416pt)
+ -- (202.58pt, -552.936pt)
+ -- (202.58pt, -552.936pt)
+ -- (202.1pt, -552.936pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(7.68,-559.92){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(213.86,-19.44){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Quick Sort ⇒ Probabilistic }
+\put(213.86,-27.59998){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Uses pivot to partition the }
+\put(213.86,-35.64001){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}array into 2 sub-arrays - }
+\put(213.86,-43.67999){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Recursively sort arrays such }
+\put(213.86,-51.73999){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}that left ≤ x ≤ right, repeating }
+\put(213.86,-59.78003){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}the partitioning process. }
+\put(213.86,-67.82001){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Combine the arrays together in }
+\put(213.86,-75.85999){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}sorted fashion. Pivot is good if }
+\put(213.86,-83.89999){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}it divides the array into 2 }
+\put(213.86,-91.94){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}pieces, each of size at least n / }
+\put(213.86,-99.98001){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}10. Median/fraction/random. }
+\put(311.09,-19.32001){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Worst n}
+\put(334.49,-16.79999){\fontsize{4.56}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}2}
+\put(336.77,-19.32001){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}, best nlog n. Worst }
+\put(311.09,-27.35999){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}when pivot = start/middle/end. }
+\put(311.09,-35.40002){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Space O(1), not stable by }
+\put(311.09,-43.56){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}default. If pack duplicates are }
+\put(311.09,-51.62){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}used, then it can be stable. 2 }
+\put(311.09,-59.65997){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}pivots > 1 pivots in speed. }
+\put(311.09,-67.70001){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Pivots are randomly picked in }
+\put(311.09,-75.73999){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}O(1) time. Invariant: Array is }
+\put(311.09,-83.78){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}partitioned, with one element }
+\put(311.09,-91.82001){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}having all larger on right and }
+\put(311.09,-99.85999){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}smaller on left. }
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_29791][even odd rule]
+(208.22pt, -12.84003pt) -- (208.7pt, -12.84003pt)
+ -- (208.7pt, -12.84003pt)
+ -- (208.7pt, -12.36005pt)
+ -- (208.7pt, -12.36005pt)
+ -- (208.22pt, -12.36005pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(208.22pt, -12.84003pt) -- (208.7pt, -12.84003pt)
+ -- (208.7pt, -12.84003pt)
+ -- (208.7pt, -12.36005pt)
+ -- (208.7pt, -12.36005pt)
+ -- (208.22pt, -12.36005pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(208.7pt, -12.84003pt) -- (305.444pt, -12.84003pt)
+ -- (305.444pt, -12.84003pt)
+ -- (305.444pt, -12.36005pt)
+ -- (305.444pt, -12.36005pt)
+ -- (208.7pt, -12.36005pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(305.45pt, -12.84003pt) -- (305.93pt, -12.84003pt)
+ -- (305.93pt, -12.84003pt)
+ -- (305.93pt, -12.36005pt)
+ -- (305.93pt, -12.36005pt)
+ -- (305.45pt, -12.36005pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(305.93pt, -12.84003pt) -- (402.65pt, -12.84003pt)
+ -- (402.65pt, -12.84003pt)
+ -- (402.65pt, -12.36005pt)
+ -- (402.65pt, -12.36005pt)
+ -- (305.93pt, -12.36005pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(402.65pt, -12.84003pt) -- (403.13pt, -12.84003pt)
+ -- (403.13pt, -12.84003pt)
+ -- (403.13pt, -12.36005pt)
+ -- (403.13pt, -12.36005pt)
+ -- (402.65pt, -12.36005pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(402.65pt, -12.84003pt) -- (403.13pt, -12.84003pt)
+ -- (403.13pt, -12.84003pt)
+ -- (403.13pt, -12.36005pt)
+ -- (403.13pt, -12.36005pt)
+ -- (402.65pt, -12.36005pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(208.22pt, -101.66pt) -- (208.7pt, -101.66pt)
+ -- (208.7pt, -101.66pt)
+ -- (208.7pt, -12.836pt)
+ -- (208.7pt, -12.836pt)
+ -- (208.22pt, -12.836pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(208.22pt, -102.14pt) -- (208.7pt, -102.14pt)
+ -- (208.7pt, -102.14pt)
+ -- (208.7pt, -101.66pt)
+ -- (208.7pt, -101.66pt)
+ -- (208.22pt, -101.66pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(208.22pt, -102.14pt) -- (208.7pt, -102.14pt)
+ -- (208.7pt, -102.14pt)
+ -- (208.7pt, -101.66pt)
+ -- (208.7pt, -101.66pt)
+ -- (208.22pt, -101.66pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(208.7pt, -102.14pt) -- (305.444pt, -102.14pt)
+ -- (305.444pt, -102.14pt)
+ -- (305.444pt, -101.66pt)
+ -- (305.444pt, -101.66pt)
+ -- (208.7pt, -101.66pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(305.45pt, -101.66pt) -- (305.93pt, -101.66pt)
+ -- (305.93pt, -101.66pt)
+ -- (305.93pt, -12.836pt)
+ -- (305.93pt, -12.836pt)
+ -- (305.45pt, -12.836pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(305.45pt, -102.14pt) -- (305.93pt, -102.14pt)
+ -- (305.93pt, -102.14pt)
+ -- (305.93pt, -101.66pt)
+ -- (305.93pt, -101.66pt)
+ -- (305.45pt, -101.66pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(305.93pt, -102.14pt) -- (402.65pt, -102.14pt)
+ -- (402.65pt, -102.14pt)
+ -- (402.65pt, -101.66pt)
+ -- (402.65pt, -101.66pt)
+ -- (305.93pt, -101.66pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(402.65pt, -101.66pt) -- (403.13pt, -101.66pt)
+ -- (403.13pt, -101.66pt)
+ -- (403.13pt, -12.836pt)
+ -- (403.13pt, -12.836pt)
+ -- (402.65pt, -12.836pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(402.65pt, -102.14pt) -- (403.13pt, -102.14pt)
+ -- (403.13pt, -102.14pt)
+ -- (403.13pt, -101.66pt)
+ -- (403.13pt, -101.66pt)
+ -- (402.65pt, -101.66pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(402.65pt, -102.14pt) -- (403.13pt, -102.14pt)
+ -- (403.13pt, -102.14pt)
+ -- (403.13pt, -101.66pt)
+ -- (403.13pt, -101.66pt)
+ -- (402.65pt, -101.66pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(208.22,-108.62){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Stable sort is one where the relative order of equal elements remains }
+\put(208.22,-117.86){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}unchanged after sorting.  }
+\put(208.22,-127.22){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Selection Sort becomes stable with O(n) extra space. }
+\put(208.22,-136.58){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Trees                   Tree Operations: log(n) –1 ≤ n }
+\put(208.22,-145.82){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Stirling’s Approx: log (n!) > n log (n/e) = Ω (n log n) (Height of tree }
+\put(208.22,-155.18){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}with n! leaves, also the no. of steps to any leaf) }
+\put(208.22,-164.54){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}In-order: Left, print, right. (Touch twice) → O(n) }
+\put(208.22,-173.9){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Pre-order: Print, left, right. (Touch once) → O(n) }
+\put(208.22,-183.17){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Post-Order: Left, Right, Print (Touch thrice / Leaving) → O(n) }
+\put(208.22,-192.53){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Successors never have 2 children because successors are minimum of }
+\put(208.22,-201.89){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}the right subtree. }
+\put(208.22,-211.13){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Delete → Remove node from tree. }
+\put(208.22,-220.49){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}- No children → Remove node }
+\put(208.22,-229.85){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}- 1 child → Remove and connect child to parent. }
+\put(208.22,-239.09){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}- 2 child → Replace node with successor, then remove old node. }
+\put(208.22,-248.45){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}AVL Tree }
+\put(208.22,-257.81){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Invariant: For any node v, abs(v.left.height– v.right.height) ≤ 1 }
+\put(208.22,-267.17){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Height-balanced tree contains at least n > 2}
+\put(329.45,-264.65){\fontsize{4.56}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}h/2}
+\put(335.33,-267.17){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} node → O (log n). }
+\put(208.22,-276.41){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Insertion → Needs 0 to 2 rotations to balance. }
+\put(208.22,-285.77){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Deletion → Needs up to O (log n) rotations to balance. }
+\put(208.22,-295.13){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Just mark the deleted note as “deleted”. Performance degrades over }
+\put(208.22,-304.39){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}time, Clean up later (Amortized time) }
+\put(208.22,-313.75){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Rebalancing     (Only rotations and deletion reduce height) }
+\put(208.22,-323.23){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Left heavy ⇒ right-rotate(v)  }
+\put(208.22,-332.71){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Right heavy ⇒ left-rotate(v) }
+\put(208.22,-342.19){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Left, right-heavy ⇒ left-rotate(v.left), right-rotate(v)  }
+\put(208.22,-351.67){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Right, left-heavy ⇒ right-rotate(v.right), left-rotate(v) }
+\put(208.22,-361.15){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Red-Black Tree }
+\put(208.22,-370.39){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}More loosely balanced • O(1) rotations for all operations. • Java }
+\put(208.22,-379.75){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}TreeSet implementation • Faster (than AVL) for insert/delete • Slower }
+\put(208.22,-389.11){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}(than AVL) for search.  }
+\put(208.22,-398.35){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Order Statistics }
+\put(208.22,-407.71){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Weight(v) = w(v.left) + w(v.right) + 1, store it into each node. }
+\put(208.22,-417.07){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Select(k): set rank = root.left.weight + 1. If k == rank then return that }
+\put(208.22,-426.31){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}node, else if k < rank: return root.left.select(k), else if k > rank: return }
+\put(208.22,-435.7){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}root.right.select(k–rank). }
+\put(208.22,-445.06){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Rank(v): First find the node v and initialise its rank to v.left.weight + }
+\put(208.22,-454.42){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}1. Recurse upwards, if the current node is the right child of its parent, }
+\put(208.22,-463.66){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}add parent.left.weight + 1 to rank(v). }
+\put(208.22,-473.02){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Update weight and rank of nodes during operations. }
+\put(208.22,-482.38){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Orthogonal Range Searching }
+\put(208.22,-491.616){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Given two numbers a < b: }
+\put(208.22,-500.976){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Range List Query: List out all the elements x such that a ≤ x ≤ b  }
+\put(208.22,-510.336){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Range Count: Count all the elements x such that a ≤ x ≤ b. rank (b) }
+\put(208.22,-519.576){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}– rank(a) + 1, if a or b are not in BST, use their successor or }
+\put(208.22,-528.936){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}predecessor respectively. }
+\put(208.22,-538.296){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Query cost: O(log}
+\put(258.62,-535.776){\fontsize{4.56}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}d}
+\put(260.9,-538.296){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} n + k)      k is the number of output elements }
+\put(208.22,-547.656){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}buildTree cost: O(n log}
+\put(273.41,-545.136){\fontsize{4.56}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}d – 1 }
+\put(283.73,-547.656){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}n) }
+\put(208.22,-556.92){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Space: O(n log}
+\put(250.1,-554.376){\fontsize{4.56}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}d – 1 }
+\put(260.42,-556.92){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}n) }
+\put(408.77,-18.84003){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Insertion, deletion, rotation maybe O(n). }
+\put(408.77,-28.20001){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Store d–1 dimensional range-tree in each node of a 1D range-tree. }
+\put(408.77,-37.56){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Construct the d–1-dimensional range-tree recursively. }
+\put(408.77,-46.79999){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Hashing }
+\put(408.77,-56.17999){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Simple Uniform Hashing Assumption:  Every key equally likely to }
+\put(408.77,-65.53998){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}map to every bucket, and keys are mapped independently. }
+\put(408.77,-74.78){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Uniform hashing assumption: every key is equally likely to be }
+\put(408.77,-84.14001){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}mapped to every permutation, independent of every other key. NOT }
+\put(408.77,-93.5){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}fulfilled by linear probing. }
+\put(408.77,-102.74){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Chaining: Each bucket contains a linked list of items. Space = O (m }
+\put(408.77,-112.1){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}+ n), m = table size, n = list size, worst case is O(n) if all items in same }
+\put(408.77,-121.46){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}bucket. }
+\put(408.77,-130.82){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Expected search time = 1 + n / m. If m > n, O (1). Else O(n).  }
+\put(408.77,-140.06){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}When m == n, we can still add new items to the hash table and still }
+\put(408.77,-149.42){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}search efficiently. }
+\put(408.77,-158.78){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Division: h(k) = k mod m; Division is slow. m is prime }
+\put(408.77,-168.02){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}If k and m are divisible by common divisor d, then only 1/d space used. }
+\put(408.77,-177.41){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Multiplication: h(k) = (Ak) mod 2}
+\put(510.07,-174.86){\fontsize{4.56}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}w}
+\put(513.31,-177.41){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} >> (w – r) (Takes r bits of the }
+\put(408.77,-186.77){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}front/left second half) }
+\put(408.77,-196.01){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Table size m = 2r, word size of a key in bits = w, A = odd constant. }
+\put(408.77,-205.37){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Faster than Division and works decently when A is odd and more than }
+\put(408.77,-214.73){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}2}
+\put(412.25,-212.21){\fontsize{4.56}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}w – 1}
+\put(422.33,-214.73){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}. }
+\put(408.77,-224.09){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Open Addressing (Probing) }
+\put(408.77,-233.33){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}If there’s collision, find new bucket by going traversing down the table }
+\put(408.77,-242.69){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}via (h(F) + f(i)) mod m }
+\put(408.77,-252.05){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Linear: f(i) = i, Quadratic: f(i) = i}
+\put(502.15,-249.53){\fontsize{4.56}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}2}
+\put(504.43,-252.05){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}, Double Hash: f(i) = i x g(key)  }
+\put(408.77,-261.29){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Double hashing > Quadratic > Linear because of minimum collisions! }
+\put(408.77,-270.65){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Performance of open addressing, expected cost of an op = 1 / (1 – a) }
+\put(408.77,-280.01){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}where a (load) = n / m }
+\put(408.77,-289.25){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Advantages: Saves space (less empty); Rarely allocate memory; Better }
+\put(408.77,-298.61){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}cache performance as table is all in one place in memory compared to }
+\put(408.77,-307.99){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}linked list. }
+\put(408.77,-317.23){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Disadvantages: Open addressing fails when load > 80\% and is more }
+\put(408.77,-326.59){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}sensitive to choose of hash functions. Sensitive to clustering as well. }
+\put(408.77,-335.95){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}When the table is full, we cannot insert any more items and cannot }
+\put(408.77,-345.31){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}search efficiently. }
+\put(408.77,-354.55){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Hash table size: Assuming chaining and simple uniform hashing, }
+\put(408.77,-363.91){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Increment by 1: O(n) resize and O(n}
+\put(510.55,-361.39){\fontsize{4.56}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}2}
+\put(512.83,-363.91){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}) insert }
+\put(408.77,-373.27){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Square: O(n}
+\put(442.73,-370.75){\fontsize{4.56}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}2}
+\put(445.01,-373.27){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}) resize and O(n) insert }
+\put(408.77,-382.51){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Double: n == 0.8 * m1 then m2 = 2m1; n < m1 / 4, then m2 = m1 / 2.     }
+\put(408.77,-391.87){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{it}\selectfont\color{color_29791}O(n).  Average insert of an item is O(1). }
+\put(408.77,-401.23){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Delete item by setting it to DELETED, stop searching only when hit }
+\put(408.77,-410.47){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}null or the key. }
+\put(408.77,-419.83){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Good Hashing Functions: (1) h(key, i) must be able to reach all slots }
+\put(408.77,-429.19){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}• True for linear probing. (2) Simple Uniform Hashing Assumption. }
+\put(408.77,-438.58){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Heaps   (Not a BST) }
+\put(408.77,-447.82){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Heap ordering: priority[parent] ≥ priority[child]  }
+\put(408.77,-457.18){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Complete binary tree: Every level (except last level) is full; all nodes }
+\put(408.77,-466.54){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}as far left as possible.  }
+\put(408.77,-475.78){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Operations: all O(max height) = O(log n)  }
+\put(408.77,-486.936){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Heap as an array: left(x) = 2x+1, right(x)= 2x+2, parent(x) = ⌊}
+\put(591.55,-482.74){\fontsize{5.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}푥−1}
+\put(594.91,-490.536){\fontsize{5.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}2}
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_29791][even odd rule]
+(591.55pt, -485.136pt) -- (601.15pt, -485.136pt)
+ -- (601.15pt, -485.136pt)
+ -- (601.15pt, -484.656pt)
+ -- (601.15pt, -484.656pt)
+ -- (591.55pt, -484.656pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(601.15,-486.936){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}⌋ }
+\put(408.77,-498.336){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}HeapSort: ⇒ O(nlogn)   max/min: bubble down larger/smaller child }
+\put(408.77,-507.696){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}In-place, Faster than Merge slower than Quick, Deterministic, }
+\put(408.77,-517.056){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Unstable, Ternary (n-way) HeapSort is faster, allow duplicates. }
+\put(408.77,-526.416){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Unsorted list to heap (Heapify): O(n) (bubble down, n-1 to 0) }
+\put(408.77,-535.656){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Heap to sorted list: O(nlogn) (extractMax, swap to back) }
+\put(408.77,-546.216){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Heap with n nodes has at least }
+\put(495.31,-542.016){\fontsize{5.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}푛}
+\put(495.55,-549.816){\fontsize{5.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}2}
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_29791][even odd rule]
+(495.31pt, -544.416pt) -- (498.67pt, -544.416pt)
+ -- (498.67pt, -544.416pt)
+ -- (498.67pt, -543.936pt)
+ -- (498.67pt, -543.936pt)
+ -- (495.31pt, -543.936pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(498.67,-546.216){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} nodes that are leaves. }
+\put(408.77,-557.52){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Each level z starts from index 2}
+\put(497.35,-554.976){\fontsize{4.56}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}z}
+\put(499.39,-557.52){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} – 1. }
+\put(609.31,-18.84003){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Union Find             Connectivity is transitive.  }
+\put(609.31,-28.20001){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Quick-find - int[] componentId – flat trees }
+\put(609.31,-37.56){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}- O(1) find: Check if 2 objects have the same componentId }
+\put(609.31,-46.79999){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}- O(n) union (p,q): Loop through array and update componentId of }
+\put(609.31,-56.17999){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}every node in q to the componentId of p. }
+\put(609.31,-65.53998){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Quick-Union - int[] parent – deeper/taller trees (unbalanced) }
+\put(609.31,-74.78){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}- O(n) find: Check if they have the same root (Need recurse to find) }
+\put(609.31,-84.14001){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}- O(n) union: \^ recurse until you find both parents and set one to be }
+\put(609.31,-93.5){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}the parent of the other. }
+\put(609.31,-102.74){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Weighted-Union - int[] parent \& - int[] size  - Balanced }
+\put(609.31,-112.1){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}- O(log n) find: Check if they have the same root/parent }
+\put(609.31,-121.46){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}- O(log n) union: Same as Quick-Union but now assign the larger size }
+\put(609.31,-130.82){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}tree as the parent and update size. }
+\put(609.31,-140.06){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Path-Compression: First find both roots. As you traverse up the tree }
+\put(609.31,-149.42){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}via recursively calling parent, update the parent of EVERY traversed }
+\put(609.31,-158.78){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}node to be the root for their own disjoint sets then union the roots. }
+\put(609.31,-168.02){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Both Find and Union are O(log n). }
+\put(609.31,-177.41){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Weighted-Union + Path-Compression: Any sequence of m }
+\put(609.31,-186.77){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}union/find operations on n objects takes O(n + mα(m, n)). Inverse }
+\put(609.31,-196.01){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Ackermann is ≤ 5 in this universe. (Very flat trees, average linear time) }
+\put(609.31,-205.37){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Graph }
+\put(609.31,-214.73){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Degree of a node = Number of adjacent edges of a node. }
+\put(609.31,-224.09){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Degree of a graph = MAXIMUM number of adjacent edges of a node. }
+\put(609.31,-233.33){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Diameter = Max distance between 2 nodes, following the shortest path }
+\put(609.31,-242.69){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Clique = Complete graph, all pairs connected by edges. Diameter = 1, }
+\put(609.31,-253.25){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Degree = n-1. Diameter of a cycle is }
+\put(713.02,-249.05){\fontsize{5.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}푛}
+\put(713.26,-256.85){\fontsize{5.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}2}
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_29791][even odd rule]
+(713.02pt, -251.45pt) -- (716.38pt, -251.45pt)
+ -- (716.38pt, -251.45pt)
+ -- (716.38pt, -250.97pt)
+ -- (716.38pt, -250.97pt)
+ -- (713.02pt, -250.97pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(716.38,-253.25){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} or }
+\put(725.74,-249.05){\fontsize{5.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}푛}
+\put(725.98,-256.85){\fontsize{5.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}2}
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_29791][even odd rule]
+(725.74pt, -251.45pt) -- (729.1pt, -251.45pt)
+ -- (729.1pt, -251.45pt)
+ -- (729.1pt, -250.97pt)
+ -- (729.1pt, -250.97pt)
+ -- (725.74pt, -250.97pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(729.1,-253.25){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} – 1, Degree = 2. }
+\put(609.31,-264.41){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Prove: Lower bound = Random generation, Upper = All combinations }
+\put(804.34,-311.23){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(609.31,-318.91){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Adjacency Matrix: Fast query = are v and w neighbours? Slow query }
+\put(609.31,-328.27){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}= find me any neighbour of v. Slow query = List all neighbours. }
+\put(609.31,-337.63){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Adjacency List is exactly opposite for all 3 queries. }
+\put(609.31,-347.11){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Breadth-first Search ⇒ O(V+E) - queue  }
+\put(609.31,-356.47){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}O(V): every vertex is added exactly once to a frontier/current level.  }
+\put(609.31,-365.71){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}O(E): every neighbour of the vertex pop from queue is visited once.  }
+\put(609.31,-375.07){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Parent edges (For that vertex, store who its parents is) form a tree \& }
+\put(609.31,-384.43){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}shortest path from S. Fails to visit every node when graph is }
+\put(609.31,-393.79){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}disconnected.  }
+\put(609.31,-403.15){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Depth-first Search ⇒ O(V+E) - stack  }
+\put(609.31,-412.51){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}O(V): DFSvisit is called exactly once per node  }
+\put(609.31,-421.87){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}O(E): DFSvisit visits each neighbour  }
+\put(609.31,-431.26){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Adjacency matrix: O(V) per node total O(V}
+\put(735.46,-428.71){\fontsize{4.56}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}2}
+\put(737.74,-431.26){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}). Keep track of visited }
+\put(609.31,-440.62){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}nodes for both searches to prevent double visiting. }
+\put(609.31,-449.86){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Directed Graphs }
+\put(609.31,-459.22){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}- In-degree = Number of incoming edges }
+\put(609.31,-468.58){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}- Out-degree = Number of outgoing edges }
+\put(609.31,-477.82){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}- For BFS, follow outgoing edges, ignore incoming edge for directed }
+\put(609.31,-487.176){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}graph. For DFS, recurse via outgoing edges and backtrack using }
+\put(609.31,-496.536){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}incoming edges. }
+\put(609.31,-505.776){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Single Source Shortest Paths }
+\put(609.31,-515.136){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}- Can use BFS if edges are all same weight.  (MIN hops not distance) }
+\put(609.31,-524.616){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Bellman Ford ⇒ O(VE) }
+\put(609.31,-533.976){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}- |V| iterations of relaxing every edge – terminate when an entire }
+\put(609.31,-543.336){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}s}
+\put(609.2,-311.14){\includegraphics[width=194.85pt,height=43.9pt]{latexImage_c710f7e72b00db78d5616a704f404e97.png}}
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_29791][even odd rule]
+(204.98pt, -562.8pt) -- (205.82pt, -562.8pt)
+ -- (205.82pt, -562.8pt)
+ -- (205.82pt, -12.35999pt)
+ -- (205.82pt, -12.35999pt)
+ -- (204.98pt, -12.35999pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(405.53pt, -562.8pt) -- (406.25pt, -562.8pt)
+ -- (406.25pt, -562.8pt)
+ -- (406.25pt, -12.35999pt)
+ -- (406.25pt, -12.35999pt)
+ -- (405.53pt, -12.35999pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(606.07pt, -562.8pt) -- (606.79pt, -562.8pt)
+ -- (606.79pt, -562.8pt)
+ -- (606.79pt, -12.35999pt)
+ -- (606.79pt, -12.35999pt)
+ -- (606.07pt, -12.35999pt) -- cycle
+;
+\end{tikzpicture}
+\newpage
+\begin{tikzpicture}[overlay]\path(0pt,0pt);\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(7.68,-18.84003){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}is negative for the cycle, the overall paths will just keep on reducing. }
+\put(7.68,-28.20001){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}(Can use to detect negative weight cycles in graph) }
+\put(7.68,-37.56){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Invariant: after 1 iteration, 1 hop away weight from source is correct, }
+\put(7.68,-46.79999){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}hence n relaxation. }
+\put(7.68,-56.29999){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Dijkstra ⇒ O((V + E) log V) = O(E log V) }
+\put(7.68,-65.65997){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}- Edges cannot be negative (may work sometimes). Cannot reweight }
+\put(7.68,-75.01999){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}the edges. Choose to relax the edge connected to the node with the }
+\put(7.68,-84.38){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}shortest estimate distance. }
+\put(7.68,-93.62){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}- Use a PQ to track the min-estimate node, relax all its neighbours that }
+\put(7.68,-102.98){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}are in the PQ and update their distance in the PQ. Keep track of nodes }
+\put(7.68,-112.34){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}that are dequeued already to avoid adding them back in PQ. }
+\put(7.68,-121.58){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Invariant: estimate of a node distance ≥ actual shortest distance }
+\put(7.68,-130.94){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}- |V| deleteMin as each node is added to PQ once. |E| relaxation as }
+\put(7.68,-140.3){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}each edge is relaxed once. Fibo Heap O(E + Vlog V).  }
+\put(7.68,-149.54){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}d-way Heap O(E log}
+\put(65.64,-150.02){\fontsize{4.56}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}E/V}
+\put(72.96,-149.54){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} V). AVL O(E logV). Array O(V}
+\put(163.34,-147.02){\fontsize{4.56}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}2}
+\put(165.62,-149.54){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}). }
+\put(7.68,-158.9){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}For DAG: O(E) (Topological sort and relax in this order).  }
+\put(7.68,-168.26){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}For trees: O(V) (relax each edge in BFS/DFS order). }
+\put(7.68,-177.65){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Longest Paths }
+\put(7.68,-186.89){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Negate the weights and the shortest path in negated = longest path in }
+\put(7.68,-196.25){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}regular. However, make sure that the negated graph has no cycle. }
+\put(7.68,-205.61){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}If directed acyclic (no cycle) graph, can solve efficiently using }
+\put(7.68,-214.85){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}topological sort. }
+\put(7.68,-224.21){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Topological Order          O(V + E)     MUST be DAG  }
+\put(7.68,-233.57){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Properties: Sequential total ordering of all nodes. Edges in the order }
+\put(7.68,-242.81){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}only point forward. }
+\put(7.68,-252.17){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Pre-Order DFS: Process each node when it is first visited.  }
+\put(7.68,-261.53){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Post-Order DFS: Process each node when it is last visited. Or, when }
+\put(7.68,-270.89){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}all the neighbours are visited, Or, when it is finished. }
+\put(7.68,-280.13){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}- For post DFS, if you reach back your original node and not every }
+\put(7.68,-289.49){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}node is visited, pick a unvisited node and do the same. }
+\put(7.68,-298.85){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}- Topological orderings are not unique, but some are unique. }
+\put(7.68,-308.11){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Connected Components }
+\put(7.68,-317.47){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}There must be a path between the 2 nodes. }
+\put(7.68,-326.83){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Strongly connected component: 2-way path between 2 nodes. }
+\put(7.68,-336.07){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Graph of strongly connected components is acyclic. }
+\put(7.68,-345.43){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Planar Graphs: If there exists an embedding for a graph, it’s planar. }
+\put(7.68,-354.91){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}If a graph is planar, 푉 − 퐸 + 퐹 = 1 + C. Has O(n) edges. Degree < 6. }
+\put(7.68,-364.27){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Minimum Spanning Trees        }
+\put(7.68,-373.63){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}- V – 1 number of edges in a MST. }
+\put(7.68,-382.87){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}- Not same as shortest paths, can DFS/BFS if same weight edge. }
+\put(7.68,-392.23){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}- Acyclic subset of the edges that connects all nodes with min weight }
+\put(7.68,-401.59){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}- Any 2 subtrees of the MSTs are also MSTs  }
+\put(7.68,-410.95){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}- For every cycle, the max weight edge is NOT in the MST, but the }
+\put(7.68,-420.19){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}min weight edge may or may not be inside the MST. }
+\put(7.68,-429.58){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}- For every partition/cut of the nodes, the minimum weight edge across }
+\put(7.68,-438.94){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}the cut is in the MST.  }
+\put(7.68,-448.18){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}- For every vertex, the minimum outgoing edge is in the MST, but max }
+\put(7.68,-457.54){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}weight edge may or may not be inside. Inside for star graph, or 1 }
+\put(7.68,-466.9){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}outgoing edge. }
+\put(7.68,-476.14){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}- The shortest edge in a graph is always in the minimal spanning tree }
+\put(7.68,-485.496){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}of that graph if no two edges have the same weight. }
+\put(7.68,-494.856){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Greedy Method                 ALL O(Elog V) }
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_29791][even odd rule]
+(7.68pt, -496.296pt) -- (54.72pt, -496.296pt)
+ -- (54.72pt, -496.296pt)
+ -- (54.72pt, -495.576pt)
+ -- (54.72pt, -495.576pt)
+ -- (7.68pt, -495.576pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(7.68,-504.096){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Prim: Add all nodes to PQ with ∞ distance except source with 0. }
+\put(7.68,-513.456){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}ExtractMin will choose the node with the min incoming edge weight }
+\put(7.68,-522.816){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}(blue) then update its neighbours that are still in the PQ if new distance }
+\put(7.68,-532.176){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}is lesser. Repeat extractMin until PQ is empty. No need to visit nodes }
+\put(7.68,-541.416){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}that are visited already as those are finalised. }
+\put(7.68,-550.896){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}- Each vertex: one insert/extractMin ⇒ O(VlogV) for |V| nodes }
+\put(7.68,-560.4){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}- Each edge: one decreaseKey ⇒ O(ElogV) for |E| edges }
+\put(208.22,-18.84003){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}- O(E) if all edges have known weight. E.g. 1-10 then use PQ array of }
+\put(208.22,-28.20001){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}size 10 with each bucket containing a linked list. }
+\put(208.22,-37.56){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Kruskal }
+\put(208.22,-46.79999){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Sort edges by weight, loop through the edges and add edges (blue) if }
+\put(208.22,-56.29999){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}unconnected (else red). Sorting ⇒ O(ElogE) = O(ElogV)  }
+\put(208.22,-65.78003){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Each edge: find \& union ⇒ O(logV) or O(α) using union-find DS }
+\put(208.22,-75.14001){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}O(α(V)E) if all edges have known weight. E.g. 1-10, array of 10 linked }
+\put(208.22,-84.5){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}list, still using UFDS. }
+\put(208.22,-93.85999){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Boruvka    O(E log}
+\put(263.57,-91.34){\fontsize{4.56}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}2}
+\put(265.85,-93.85999){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} V / P), where P is \# of processors }
+\put(208.22,-103.1){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Parallelizable (Each CPU core can handle different components until }
+\put(208.22,-112.46){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}they link up), faster in “good” graphs (e.g., planar graphs), flexible. }
+\put(208.22,-121.82){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}At the start, for every node: add minimum adjacent edge.  }
+\put(208.22,-131.18){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Repeat: for every connected component, add minimum outgoing edge.  }
+\put(208.22,-140.42){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}To find the min edge, use DFS/BFS on each node in the component.  }
+\put(208.22,-149.78){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}In each step, assuming there are k components, at least k/2 edges are }
+\put(208.22,-159.14){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}added, k/2 components merged and at most k/2 components remaining. }
+\put(208.22,-168.38){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Euclidean MST Naïve solution: Compute a complete graph of P with }
+\put(208.22,-177.89){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}each edge equal to the Euclidean distance ⇒ O(n}
+\put(345.53,-175.34){\fontsize{4.56}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}2}
+\put(347.81,-177.89){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}). Then run MST ⇒ }
+\put(208.22,-187.25){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}O(n}
+\put(219.02,-184.73){\fontsize{4.56}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}2}
+\put(221.3,-187.25){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}log n). Better solution: O(n log n) by Delaunay Triangulation. }
+\put(208.22,-196.61){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}- Cut/cycle property, generic MST algorithm do not work for directed }
+\put(208.22,-205.97){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}MST. }
+\put(208.22,-215.33){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Directed MST with one root ⇒ O(E). For every node, add minimum }
+\put(208.22,-224.81){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}weight incoming edge. }
+\put(208.22,-234.05){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Maximum spanning tree: Multiply the weight with -1 or add a large }
+\put(208.22,-243.41){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}positive number and solve normally. Does not affect MST. }
+\put(208.22,-252.77){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Binary Space Partitioning Tree }
+\put(208.22,-262.01){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Subdivide the entire space by a binary tree. Each internal node is a }
+\put(208.22,-271.37){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}division of a partition/space. Each leaf is a part of the space with only }
+\put(208.22,-280.73){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}1 polygon. Just choose a random polygon as a root to start partitioning. }
+\put(208.22,-289.97){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}But without reference to a viewpoint, the left and right child of a BSP }
+\put(208.22,-299.33){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}tree do not matter. With a viewpoint, polygons are rendered from back }
+\put(208.22,-308.71){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}to front. Thus, BSP is constructed with the furthest polygon as the }
+\put(208.22,-318.07){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}leftmost child and the nearest as the rightmost child. Rendering is done }
+\put(208.22,-327.31){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}via In-order traversal of the BSP tree. }
+\put(208.22,-336.67){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Advantage: Once the tree is computed, the tree can handle all }
+\put(208.22,-346.03){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}viewpoints without reconstructing the tree (efficient). It can also }
+\put(208.22,-355.27){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}handle transparency.  }
+\put(208.22,-364.63){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Disadvantages: Cannot handle moving/changing environments. }
+\put(208.22,-373.99){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Preprocessing time for tree construction is long. }
+\put(208.22,-383.23){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Computational Geometry }
+\put(208.22,-392.59){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Solving computational problems by geometric methods. E.g. Simplex }
+\put(208.22,-401.95){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}algorithm in linear programming }
+\put(208.22,-411.43){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Mathematical Thinking ⇒ Does a solution exist? Is there more than 1? }
+\put(208.22,-420.79){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}How many? Can be solved without finding an actual solution. }
+\put(208.22,-430.18){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Computational Thinking ⇒ Is it computable? How fast? Given a set }
+\put(208.22,-439.66){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}of disks, find the area of union. Use Inclusion-Exclusion formula. }
+\put(208.22,-448.9){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Convex Hull            O(nlog n) }
+\put(208.22,-458.26){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}A convex hull is the set of all convex combinations. A point in a set P }
+\put(208.22,-467.74){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}is convex if ∀x,y ∈ P, the edge xy ⊆ P.  }
+\put(208.22,-477.1){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Jarvis’ March (Gift Wrapping) }
+\put(208.22,-486.576){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Take the leftmost vertex and draw a downward arrow (0°). Repeat: }
+\put(208.22,-495.936){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Search for the next vertex on the convex hull by choosing the one with }
+\put(208.22,-505.296){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}the minimal turning angle with reference to the arrow (Arrow only }
+\put(208.22,-514.656){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}increment in degrees w.r.t original 0°). Complexity: O(hn), where h is }
+\put(208.22,-524.136){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}the number of faces of the convex hull, O(n) for looking through all }
+\put(208.22,-533.376){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}the points to find the min angle point. }
+\put(208.22,-542.736){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}- Can go clockwise or anti-clockwise. }
+\put(208.22,-552.096){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}- Best case: points are sorted already O(n). }
+\put(408.77,-18.84003){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Graham Scan }
+\put(408.77,-28.20001){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Take the left most vertex. Sort O(nlog n) the rest according to their }
+\put(408.77,-37.56){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}angles. Connect ALL points in that order and form a polygon. Starting }
+\put(408.77,-46.79999){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}from the left most vertex, go around the polygon. If it is a concave }
+\put(408.77,-56.17999){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}vertex, “make it convex” by “filling” it through connecting its two }
+\put(408.77,-65.53998){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}neighbours. At most one vertex is “buried” thus at most 1 step back. }
+\put(408.77,-74.78){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Divide and Conquer (D \& C) }
+\put(408.77,-84.14001){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Sort O(nlog n) vertices in a direction, e.g. y direction. Repeat: Merge }
+\put(408.77,-93.5){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}every neighbouring convex hull, similar to Merge Sort. For any 2 }
+\put(408.77,-102.74){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}convex hulls to merge, take the highest point of the lower hull and the }
+\put(408.77,-112.1){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}lowest point of the higher hull and form a line. Walk until the angle }
+\put(408.77,-121.58){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}between the line and the boundaries of both hulls ≥ 180° (convex). }
+\put(408.77,-130.94){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Concavity and convexity consider internal angle of the polygon. }
+\put(408.77,-140.3){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Incremental Method }
+\put(408.77,-149.54){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Adding a point according to a sorted direction incrementally to a }
+\put(408.77,-158.9){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}convex hull. }
+\put(408.77,-168.26){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Similar to D \& C but different. Consider the point and the existing hull }
+\put(408.77,-177.65){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}as 2 hulls and merge them. }
+\put(408.77,-186.89){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}3D Convex Hull }
+\put(408.77,-196.25){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}D \& C: Expected O(nlog n) with a complicated data structure. }
+\put(408.77,-205.61){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Quickhull: First find the maximum and minimum in x and y }
+\put(408.77,-214.85){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}directions and draw a polygon. Discard any points inside and for each }
+\put(408.77,-224.21){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}side of the polygon, find the furthermost point and include it in the }
+\put(408.77,-233.57){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}convex hull. Eliminate any point within. O(n}
+\put(534.31,-231.05){\fontsize{4.56}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}2}
+\put(536.59,-233.57){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}) in 2D and 3D. }
+\put(408.77,-242.81){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}In general: O(n}
+\put(451.51,-240.29){\fontsize{4.56}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}ceil(d/2) - 1 }
+\put(474.19,-242.81){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}+ nlog n) due to the complexity of the number }
+\put(408.77,-252.17){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}of “faces” on a convex hull. Every two dimension increases }
+\put(408.77,-261.53){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}complexity by one. }
+\put(408.77,-270.89){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Degeneracy }
+\put(408.77,-280.13){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}- More than two points that are collinear: Especially on the boundary. }
+\put(408.77,-289.49){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}can be corrected by changing the “less than” to “less than or equal to” }
+\put(408.77,-298.85){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}when walking.  }
+\put(408.77,-308.11){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}- Same coordinates in sorting: “Slightly” rotate all the points by an }
+\put(408.77,-317.47){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}infinitely small angle. If they have the same x values, compare their y }
+\put(408.77,-326.83){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}values. Perturbation to improve algorithm's stability and robustness. }
+\put(408.77,-336.07){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Combining Data Structures }
+\put(408.77,-345.55){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Queue + Linked Lists: Enqueue ⇒ O(n), Dequeue ⇒ O(1) }
+\put(408.77,-355.03){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}printInOrder ⇒ O(n), Peek ⇒ O(1). }
+\put(408.77,-364.63){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Queue + BST: Enqueue ⇒ O(log n), Dequeue ⇒ O(1), printInOrder }
+\put(408.77,-374.11){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}⇒ O(n), Peek ⇒ O(1) }
+\put(408.77,-383.47){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Skip List: Multiple linked lists with same list with ‘skips’ between }
+\put(408.77,-393.91){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}nodes. Skips of length m reduces search operation to at most }
+\put(580.99,-389.71){\fontsize{5.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}푛}
+\put(580.27,-397.51){\fontsize{5.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}푚}
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_29791][even odd rule]
+(580.27pt, -392.11pt) -- (585.07pt, -392.11pt)
+ -- (585.07pt, -392.11pt)
+ -- (585.07pt, -391.63pt)
+ -- (585.07pt, -391.63pt)
+ -- (580.27pt, -391.63pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(585.07,-393.91){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}+ m. }
+\put(408.77,-405.43){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Initialise k = 0, while (!done) ⇒ Insert element into level k list. Flip a }
+\put(408.77,-414.79){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}fair coin: 50\% done = true, 50\% k += 1. Each search/insert takes O(log }
+\put(408.77,-424.15){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}n) on average. Probabilistic searching. (Expected time) }
+\put(408.77,-433.42){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Additional }
+\put(408.77,-442.9){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}T(n) = 2 T(n/2) + O(n) ⇒ O(nlog n) }
+\put(408.77,-452.38){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}T(n) = T(n/2) + O(n) ⇒ O(n) }
+\put(408.77,-461.86){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}T(n) = 2 T(n/2) + O(1) ⇒ O(n) }
+\put(408.77,-471.46){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}T(n) = T(n/2) + O(1) ⇒ O(log n) }
+\put(408.77,-480.94){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}T(n) = 2 T(n−1) + O(1) ⇒ O(2}
+\put(494.47,-478.42){\fontsize{4.56}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}n}
+\put(496.75,-480.94){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}) }
+\put(408.77,-490.416){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}T(n) = T(n−1) + O(1) ⇒ O(n) }
+\put(408.77,-499.896){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}T(n) = 2 T(n/2) + O(nlog n) ⇒ O(n(log n)}
+\put(525.79,-497.376){\fontsize{4.56}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}2}
+\put(528.07,-499.896){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791})  }
+\put(408.77,-510.336){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}T(n) = 2 T(n/4) + O(1) ⇒ O(}
+\put(489.07,-510.696){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}√}
+\put(493.63,-510.336){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}푛}
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_29791][even odd rule]
+(493.63pt, -504.816pt) -- (497.71pt, -504.816pt)
+ -- (497.71pt, -504.816pt)
+ -- (497.71pt, -504.336pt)
+ -- (497.71pt, -504.336pt)
+ -- (493.63pt, -504.336pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(497.83,-510.336){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}) }
+\put(408.77,-519.696){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}T(n) = T(n−c) + O(n) ⇒ O(n}
+\put(488.83,-517.176){\fontsize{4.56}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}2}
+\put(491.11,-519.696){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}) }
+\put(408.77,-530.016){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}O(}
+\put(416.21,-530.376){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}√}
+\put(420.77,-530.016){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}푛}
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_29791][even odd rule]
+(420.77pt, -524.496pt) -- (424.85pt, -524.496pt)
+ -- (424.85pt, -524.496pt)
+ -- (424.85pt, -524.016pt)
+ -- (424.85pt, -524.016pt)
+ -- (420.77pt, -524.016pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(424.97,-530.016){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}log n) = O(n) }
+\put(408.77,-539.376){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}O(log(n}
+\put(430.85,-536.856){\fontsize{4.56}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}2}
+\put(433.13,-539.376){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791})) = O(2log n) }
+\put(408.77,-548.736){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Concatenation of strings itself is O(n). }
+\put(408.77,-558.12){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Harmonic series: j=i; j < n; j+=i ⇒ O(log n) but outer loop i is O(n). }
+\put(609.31,-19.79999){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Orders of growth: 1 < log n < }
+\put(695.62,-20.15997){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}√}
+\put(700.18,-19.79999){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}푛}
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_29791][even odd rule]
+(700.18pt, -14.28003pt) -- (704.26pt, -14.28003pt)
+ -- (704.26pt, -14.28003pt)
+ -- (704.26pt, -13.80005pt)
+ -- (704.26pt, -13.80005pt)
+ -- (700.18pt, -13.80005pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(704.38,-19.79999){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} < n < nlog n < n}
+\put(749.38,-17.28003){\fontsize{4.56}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}2}
+\put(751.66,-19.79999){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} < 2}
+\put(761.98,-17.28003){\fontsize{4.56}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}n}
+\put(764.26,-19.79999){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} < 2}
+\put(774.46,-17.28003){\fontsize{4.56}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}2n}
+\put(779.02,-19.79999){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} < log}
+\put(795.34,-21.23999){\fontsize{5.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}푎}
+\put(800.02,-19.79999){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}푛 }
+\put(609.31,-29.15997){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}< n}
+\put(618.55,-26.64001){\fontsize{4.56}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}a}
+\put(620.59,-29.15997){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} < a}
+\put(631.15,-26.64001){\fontsize{4.56}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}n}
+\put(633.43,-29.15997){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} < n! < n}
+\put(657.7,-26.64001){\fontsize{4.56}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}n}
+\put(659.86,-29.15997){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(609.31,-38.52002){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Diameter of a graph: SSSP all ⇒ O(V}
+\put(715.18,-36){\fontsize{4.56}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}2}
+\put(717.46,-38.52002){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} logV )  }
+\put(609.31,-48.12){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}APSP: Dijkstra all ⇒ O(V E logV ) or O(V}
+\put(730.42,-45.59998){\fontsize{4.56}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}2}
+\put(732.7,-48.12){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} E)  }
+\put(609.31,-57.62){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}APSP: Floyd Warshall ⇒ O(V}
+\put(694.3,-55.09998){\fontsize{4.56}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}3}
+\put(696.58,-57.62){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}) }
+\put(609.31,-66.97998){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Update/relax weight: If current node dist + weight of edge < dist in PQ }
+\put(609.31,-76.34){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Tips and Tricks }
+\put(609.31,-85.57999){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Sorting: Only merge and heap use O(n) space, rest O(1). }
+\put(609.31,-94.94){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Graph: Consider adding a super node that connects 2 graphs when }
+\put(609.31,-104.3){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}computation cheapest paths or shortest path is required. The weight of }
+\put(609.31,-113.66){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}the edge can be 0 if the points in the 2 graphs are the same. }
+\put(609.31,-122.9){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Hashing: Consider collisions (Not uniform distribution) and usage of }
+\put(609.31,-132.26){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}the whole table when considering if a hashing method is good. Hash }
+\put(609.31,-141.62){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}keys are immutable and cannot duplicate but values can be mutated. }
+\put(609.31,-150.86){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}When given a hash function, see if its multiplication or division. }
+\put(609.31,-160.22){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Consider if it meets the requirements for it. NEVER square! }
+\put(609.31,-169.58){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Sorting: If an array of size > c has only distinct c duplicate items, you }
+\put(609.31,-178.85){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}can sort it using counting sort in O(n) time. To sort m sorted arrays }
+\put(609.31,-188.21){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}that adds up to n elements into 1 sorted array takes O(nlog m). }
+\put(609.31,-197.57){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Traversal: In-order is always sorted order for BST not Binary Tree. }
+\put(609.31,-206.93){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Pre-order is not the reverse of Post-order. Given a connected graph }
+\put(609.31,-216.17){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}with a source and a destination, BFS may traverse fewer vertices from }
+\put(609.31,-225.53){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}the source to the destination than DFS. DFS from the root is pre-order }
+\put(609.31,-234.89){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}DFS. }
+\put(804.34,-301.13){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(609.31,-308.95){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Recurrence }
+\put(609.31,-318.31){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}For any recurrence of the form, T(n) ≤ T(an) + T(bn) + cn, if a + b < }
+\put(609.31,-327.67){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}1, the recurrence will solve to O(n), and if a + b > 1, the recurrence is }
+\put(609.31,-336.91){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}usually equal to Ω(nlog n). }
+\put(609.31,-346.27){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Linear Sort }
+\put(609.31,-355.63){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Counting Sort: O(n + k) }
+\put(609.31,-366.91){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Radix Sort: O(}
+\put(650.62,-362.71){\fontsize{5.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}푏}
+\put(650.74,-370.51){\fontsize{5.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}푟}
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_29791][even odd rule]
+(650.62pt, -365.11pt) -- (653.74pt, -365.11pt)
+ -- (653.74pt, -365.11pt)
+ -- (653.74pt, -364.63pt)
+ -- (653.74pt, -364.63pt)
+ -- (650.62pt, -364.63pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(654.82,-366.91){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}(푛+2}
+\put(674.14,-364.39){\fontsize{4.56}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}r}
+\put(675.7,-366.91){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791})) }
+\put(609.31,-378.19){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Amortized Analysis  }
+\put(609.31,-387.55){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Given a sequence of c operations, total amortized cost is given by }
+\put(609.31,-396.91){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}f(n) ∗ c ≥ c ∗ actual cost but this does not necessary mean that the }
+\put(609.31,-406.39){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}amortized cost, f(n) ≥C}
+\put(674.5,-406.87){\fontsize{4.56}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}a}
+\put(676.54,-406.39){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}.  }
+\put(609.31,-415.63){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Aggregate Analysis  }
+\put(609.31,-424.99){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Total time / total \# of operations. Lacks precision and may not work }
+\put(609.31,-434.38){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}for some cases. Useful for single operation.  }
+\put(609.31,-443.62){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Accounting Method  }
+\put(609.31,-452.98){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Impose extra charges on inexpensive operations and use it to pay for }
+\put(609.31,-462.34){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}expensive operations. Any amount that is not used is stored in the }
+\put(609.31,-471.58){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}bank for use by subsequent operations. The bank balance must not go }
+\put(609.31,-480.94){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}negative.  }
+\put(609.31,-490.296){\fontsize{6.96}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Potential Method  }
+\put(609.31,-499.656){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Denote ϕ(i) to be the potential at the end of i}
+\put(733.9,-497.136){\fontsize{4.56}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}th}
+\put(737.5,-499.656){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} operation. ϕ(0) = 0 ϕ(i) }
+\put(609.31,-508.896){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}≥ 0 for all i.  }
+\put(609.31,-518.256){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Amortized analysis guarantees the average performance of each }
+\put(609.31,-527.616){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}operation in the worst case.  }
+\put(609.31,-536.856){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}If we want to show that the actual cost of n operations is O(g(n)), it }
+\put(609.31,-546.216){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}suffices to show that the amortized cost is O(g(n)). }
+\put(609.31,-555.576){\fontsize{6.96}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(609.2,-301.14){\includegraphics[width=194.85pt,height=63.5pt]{latexImage_5ca666c4db59129476611d9ea58434cd.png}}
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_29791][even odd rule]
+(204.98pt, -563.28pt) -- (205.82pt, -563.28pt)
+ -- (205.82pt, -563.28pt)
+ -- (205.82pt, -12.36005pt)
+ -- (205.82pt, -12.36005pt)
+ -- (204.98pt, -12.36005pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(405.53pt, -563.28pt) -- (406.25pt, -563.28pt)
+ -- (406.25pt, -563.28pt)
+ -- (406.25pt, -12.36005pt)
+ -- (406.25pt, -12.36005pt)
+ -- (405.53pt, -12.36005pt) -- cycle
+;
+\filldraw[color_29791][even odd rule]
+(606.07pt, -563.28pt) -- (606.79pt, -563.28pt)
+ -- (606.79pt, -563.28pt)
+ -- (606.79pt, -12.36005pt)
+ -- (606.79pt, -12.36005pt)
+ -- (606.07pt, -12.36005pt) -- cycle
+;
+\end{tikzpicture}
+\end{document}
